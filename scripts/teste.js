@@ -5,10 +5,13 @@ pLogin.addEventListener("click",function(e){
     e.preventDefault();
     const pSenha=document.querySelector("#senha");
     const pRA=document.querySelector("#ra");
+    
     const valueR = pRA.value, valueS = pSenha.value;
     console.log(valueR);
     console.log(valueS);
 })
+const jsonData= require('arqJson/teste.json'); 
+console.log(jsonData);
     function loadJSON(url, callback) { 	   
         let xobj = new XMLHttpRequest();      
        xobj.overrideMimeType('arqJson/teste.json'); 	
