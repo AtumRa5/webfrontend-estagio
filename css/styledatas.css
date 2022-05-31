@@ -143,3 +143,25 @@ body {
     color: #009879;
 }
 
+.button1 {
+  background-color: #2ccc51;
+  border: none;
+  float: right;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #fefefe;
+  color: rgb(0, 0, 0);
+  border: 2px solid #4CAF50;
+  
+}
+
