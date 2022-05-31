@@ -1,3 +1,5 @@
+import 'scripts/require.js';
+
 const pLogin=document.querySelector("#login");
 console.log(pLogin);
 pLogin.addEventListener("click",function(e){
