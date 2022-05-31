@@ -9,11 +9,11 @@ pLogin.addEventListener("click",function(e){
     console.log(valueR);
     console.log(valueS);
 })
-const jsonData= require('arqJson/teste.json'); 
+const jsonData= require('arqJson/user.json'); 
 console.log(jsonData);
     function loadJSON(url, callback) { 	   
         let xobj = new XMLHttpRequest();      
-       xobj.overrideMimeType('arqJson/teste.json'); 	
+       xobj.overrideMimeType('arqJson/user.json'); 	
        xobj.open('GET', url, true); 	
        xobj.onreadystatechange = () => { 		
        if (xobj.readyState == 4 && xobj.status == '200') 
@@ -22,7 +22,7 @@ console.log(jsonData);
     
     //Utilizando o método
     
-   /* getJSON("arqJson/teste.json", function(err, data) {
+   /* getJSON("arqJson/user.json", function(err, data) {
       if (err !== null) {
         console.log('Ocorreu um erro' + err);
       } else {
@@ -31,12 +31,12 @@ console.log(jsonData);
         console.log(data);
       }
     });*/
-fetch("arqJson/teste.json")
+fetch("arqJson/user.json")
   .then(response => response.json())
   .then(json => console.log(json));
 
     async function printJSON() {
-        const response = await fetch("arqJson/teste.json");
+        const response = await fetch("arqJson/user.json");
         const json = await response.json();
         console.log(response.json());
     }
