@@ -1,6 +1,5 @@
-
-    const pLogin=document.querySelector("#login");
-
+const pLogin=document.querySelector("#login");
+console.log(pLogin);
 pLogin.addEventListener("click",function(e){
     e.preventDefault();
     const pSenha=document.querySelector("#senha");
