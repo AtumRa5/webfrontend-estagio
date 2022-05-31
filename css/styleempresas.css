@@ -1,0 +1,167 @@
+body {
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+    background: #205f26;
+   
+    
+     
+  }
+
+  .navbar{
+      background: #ddd;
+  }
+
+  .navbar-nav{
+      color: greenyellow;
+      display: inline-block ;
+
+  }
+
+  a:link, a:visited {
+    background-color: #2ccc51;
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(17, 255, 0);
+  }
+
+  .sobredois {
+    border: 2px solid rgb(17, 255, 0);
+    border-radius: 8px;
+    
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    
+  }
+
+  .sobre {
+   
+    border-radius: 8px;
+    padding: 5px;
+    padding: 20px;
+   
+  }
+
+  h2{
+    background: white;
+    display: inline-block;
+    border: 2px solid rgb(17, 255, 0);
+    border-radius: 8px;
+    padding: 5px;
+    padding: 20px;
+    
+
+  }
+
+  h3{
+    display: inline-block;
+    padding: 5px;
+    
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    
+    bottom: 0;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+  }
+
+  .button {
+    background-color: #2ccc51;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    margin: 25px 630px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    background-color: #fefefe;
+    color: rgb(0, 0, 0);
+    border: 2px solid #4CAF50;
+    
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 500px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  
+}
+.styled-table thead tr {
+    background-color: #2ccc51;
+    color: #ffffff;
+   
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #f3f3f3;
+    font-weight: bold;
+    color: #009879
+}
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.button1 {
+  background-color: #2ccc51;
+  border: none;
+  float: right;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #fefefe;
+  color: rgb(0, 0, 0);
+  border: 2px solid #4CAF50;
+  
+}
+
