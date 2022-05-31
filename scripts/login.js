@@ -11,6 +11,7 @@ pLogin.addEventListener("click",function(e){
     console.log(valueR);
     console.log(valueS);
 })
+
 const jsonData= require('arqJson/user.json'); 
 console.log(jsonData);
     function loadJSON(url, callback) { 	   
@@ -33,6 +34,7 @@ console.log(jsonData);
         console.log(data);
       }
     });*/
+
 fetch("arqJson/user.json")
   .then(response => response.json())
   .then(json => console.log(json));
