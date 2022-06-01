@@ -72,9 +72,9 @@ body {
     text-align: center;
     background: #ddd;
     
-    bottom: 0;
+    
     height: 100px;
-    left: 0;
+   
     position: absolute;
     width: 100%;
 
@@ -128,7 +128,7 @@ body {
     font-weight: bold;
     color: #009879
 }
-}
+
 
 .styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
@@ -165,3 +165,10 @@ body {
   
 }
 
+.myChart{
+  border: none;  
+  padding: 35px 372px; 
+  display: inline-block;
+  font-size: 16px;
+
+}

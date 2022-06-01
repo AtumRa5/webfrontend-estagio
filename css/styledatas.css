@@ -128,7 +128,7 @@ body {
     font-weight: bold;
     color: #009879
 }
-}
+
 
 .styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
@@ -165,3 +165,8 @@ body {
   
 }
 
+#marcador{
+  padding: 20px;
+  float: right;
+   
+}
