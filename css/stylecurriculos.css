@@ -1,5 +1,6 @@
 body {
-    margin:0px;
+    width: 100%;
+    margin: 0px;
     padding:0px;
     font-family: sans-serif;
     background: #205f26;
@@ -128,6 +129,7 @@ body {
 
     background-color: #fefefe;
     border: 2px solid rgb(17, 255, 0);
+    
     border-radius: 18px;
     padding: 5px 132px;
     width: 10px;
@@ -137,15 +139,71 @@ body {
 
  }
 
- .letrag{
-     
-     background-color: #fefefe;
-     border: 2px solid rgb(17, 255, 0);
-     border-radius: 18px;
-     padding: 5px 132px;
-     width: 10px;
-     display:inline-table;
-     margin-top: 20px;
-     margin-inline-start: 500px;
-      
+
+
+ .radios{
+    margin-inline: 10px ;
+
  }
+
+ .box {
+
+  margin-inline: center;
+  border-radius:20px;
+  width: 280px;
+    padding: 50px;
+  
+  text-align: center;
+    
+}
+
+.box h1 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+ 
+
+.text-input {
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #1aeb47;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 25px;
+  transition: 0.25s;
+  
+}
+ 
+ 
+.text-input:focus {
+  width: 250px;
+  border-color: #1aeb47;
+}
+ 
+
+ .box input[type="submit"] {
+  border: 0;
+  background-color: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #1aeb47;
+  padding: 14px 40px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+ 
+.box input[type="submit"]:hover {
+  background: #1aeb47;
+}
+

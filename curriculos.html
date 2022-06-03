@@ -76,40 +76,40 @@
 
         </nav>
 
-        <div class="letrag" >Preencher Curriculo</div>
-        <form>
+        
+        <form class="box">
             <div class="curriculo" id ="curriculoDiv">
               <span id="erroDescricao"></span>
            
-            <div>
+            
                 
-              <label>Nome:</label>
-              <input type="text" />
-              </div>
+              <h1>Preencher curriculo</h1>
+              <input type="text" class="text-input"placeholder="Nome">
+              <input type="text" class="text-input"placeholder="Sobrenome">
+              <input type="date" class="text-input"placeholder="Data de Nascimento">
+           
 
-              <div>
-              <label>Sobrenome:</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label>Data de Nascimento:</label>
-              <input type="text" />
-            </div>
-            <div>
+            
                 
-                <label>Sexo:</label>
-                <input type="radio"  /> masculino
-                <input type="radio" />feminino
+                <label>Sexo:</label> <br>
+             <div class="radios"><input type="radio"  />masculino <br>
+                  <input type="radio" />feminino
+              </div>
                 </div>
   
                 <div>
-                <label>Sobrenome:</label>
-                <input type="text" />
+                <label>Cursos</label> <br>
+                <div class="radios"> 
+                  <input type="checkbox" />TI<br>
+                  <input type="checkbox" />BCC<br>
+                  <input type="checkbox" />MED<br>
+                </div>
               </div>
-              <div>
-                <label>Data de Nascimento:</label>
-                <input type="text" />
-              </div>
+              
+                
+                <input type="email" class="text-input"placeholder="Email">
+              
+             <div class="box"> <input type="submit" value="Finalizar"></div>
            </div>
           </form>
 
