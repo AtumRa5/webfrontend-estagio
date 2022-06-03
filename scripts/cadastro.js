@@ -10,6 +10,8 @@ cad.addEventListener("click",function(c){
     console.log(valuesCRA);
     console.log(valuesCRI);
     console.log(valuesCO);
-    
+    /*guardar os resultados no json*/
+    if(valuesCRA!="" && valuesCRI!="" && valuesCO!="")//utilazar o json
+    window.location.href = "index.html";//NÃO MEXER
 
 })
