@@ -1,5 +1,12 @@
 var cad = document.getElementById("cadastrar");
+const pVoltar=document.querySelector("#voltar");
 
+pVoltar.addEventListener("click",function(v){
+    v.preventDefault();
+    window.location.href = "login.php"; //Redireciona para a página login
+})
+
+/*
 console.log(cad);
 cad.addEventListener("click",function(c){
     c.preventDefault();
@@ -10,8 +17,9 @@ cad.addEventListener("click",function(c){
     console.log(valuesCRA);
     console.log(valuesCRI);
     console.log(valuesCO);
-    /*guardar os resultados no json*/
+    //guardar os resultados no json
     if(valuesCRA!="" && valuesCRI!="" && valuesCO!="")//utilazar o json
     window.location.href = "index.html";//NÃO MEXER
 
 })
+*/

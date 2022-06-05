@@ -3,11 +3,9 @@ const box = document.querySelector(".box");
 const pLogin=document.querySelector("#login");
 const pCad=document.querySelector("#cad");
 
-console.log(pLogin);
-
 pCad.addEventListener("click",function(c){
   c.preventDefault();
-  window.location.href = "cadastro.html"; //Redireciona para a página cadastro
+  window.location.href = "cadastro.php"; //Redireciona para a página cadastro
 })
 
 /*
