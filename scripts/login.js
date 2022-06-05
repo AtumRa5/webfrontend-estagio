@@ -1,14 +1,23 @@
 
 const box = document.querySelector(".box");
 const pLogin=document.querySelector("#login");
+const pCad=document.querySelector("#cad");
+
 console.log(pLogin);
+
+pCad.addEventListener("click",function(c){
+  c.preventDefault();
+  window.location.href = "cadastro.html"; //Redireciona para a página cadastro
+})
+
+/*
 pLogin.addEventListener("click",function(e){
     e.preventDefault();
     
     const pSenha=document.querySelector("#senha");
     const pRA=document.querySelector("#ra");
     const valueR = pRA.value, valueS = pSenha.value;
-    /*procurar no php o json*/
+    //procurar no php o json
 
     console.log(valueR);
     console.log(valueS);
@@ -29,9 +38,11 @@ pLogin.addEventListener("click",function(e){
         box.classList.add("form-hide");
       }
     
-    if(valueR!="" && valueS!="")//utilazar o json
-    window.location.href = "index.html";//NÃO MEXER
+    if(valueR!="" && valueS!=""){
+      window.location.href = "index.html"; //Redireciona para página index caso a senha esteja correta
+    }
 })
+*/
 
 
     
