@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -79,39 +78,34 @@
         </nav>
 
         <div class="tabela">
-                <table class="styled-table" border="2">
-                        <thead>
-                          <tr>        
-                          <th>Empresa</th>
-                          
-                         </tr>
-                 </thead>
-                  <tbody>
-                            <tr>
-                              <td>Microsoft</td>
-                             
-                          </tr>
-                          <tr class="active-row">
-                            <td>Google</td>
-                         
-                          </tr>
-                          <tr class="active-row">
-                                <td>Netflix</td>
-                             
-                              </tr>
-                              <tr class="active-row">
-                                <td>Apple</td>
-                             
-                              </tr>
-                              <tr class="active-row">
-                                <td>Amazon</td>
-                             
-                              </tr>
-                   
-                        </tbody>
-                 </table>
+          <?php
+            $arquivo = file_get_contents('arqJson/empresas.json');
+            $dados = json_decode($arquivo);
 
-               
+            //montagem do html da tabela
+            $table  = '<table class="styled-table" border="2">';
+            $table .= '<thead>';
+            $table .= '<tr>';
+            $table .= '<th>CNPJ</th>';
+            $table .= '<th>Nome</th>';
+            $table .= '</tr>';
+            $table .= '</thead>';
+            $table .= '<tbody>';
+
+            foreach($dados->cadastros as $cadastros){
+              $table .= '<tr class="active-row">';
+              $table .= "<td>{$cadastros->cnpj}</td>";
+              $table .= "<td>{$cadastros->nome}</td>";
+              $table .= '</tr>';
+            }
+
+            // fecahamento do html
+            $table .= '</tbody>';
+            $table .= '</table>';
+
+            // exibição na tela
+            echo $table;
+          ?>
         </div>
 
         <div class="myChart"

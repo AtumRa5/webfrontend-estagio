@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CadastrarEmpresa</title>
+    <title>CadastrarEstagio</title>
     <link rel="stylesheet" href="css/stylecadastrarempresa.css">
 </head>
 
@@ -20,7 +19,7 @@
 <body>
 
     <form class="box" method="post" action=""> 
-        <h1>Cadastro de Empresa</h1>
+        <h1>Cadastro de Estagio</h1>
         <input type="text" name="cpf" id="cpf" class="text-input"placeholder="CNPJ" >
         <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome">
         

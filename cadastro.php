@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -34,23 +33,23 @@
             $login = $_POST['ra'];
             $senha = $_POST['senha'];
             $confirmarsenha = $_POST['confirmarsenha'];
-            $verif = 0;
-            $verifuser = 0;
+            $verif = 0; // Verifica se as senhas são equivalentes
+            $verifuser = 0; // Verifica se o usuário já existe no json
 
-            if($senha == $confirmarsenha)
+            if($senha != $confirmarsenha) // Verifica se as senhas são equivalentes
                 $verif = 1;
             
             $arquivo = file_get_contents('arqJson/user.json');
             $dados = json_decode($arquivo, true);
 
-            foreach($dados['cadastros'] as $cadastros){
+            foreach($dados['cadastros'] as $cadastros){ // Verifica se o usuário já existe no json
                 if($cadastros['RA'] == $login)
                     $verifuser = 1;
             }
 
             if($verifuser == 1){
                 echo '<script>alert("O RA digitado já está cadastrado!")</script>';
-            }else if($verif == 0){
+            }else if($verif == 1){
                 echo '<script>alert("As senhas não são equivalentes!")</script>';
             }else if($login == '' || $senha == ''){
                 echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
