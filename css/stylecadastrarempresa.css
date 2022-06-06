@@ -32,7 +32,7 @@ body {
     width: 280px;
     padding: 30px;
     position:absolute;
-   
+    margin-top: 30px;
     top: 60%;
     left: 50%;
     border-radius:20px;
@@ -48,7 +48,6 @@ body {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
-    
   }
    
   .text-input {

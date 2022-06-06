@@ -10,7 +10,7 @@
   </head>
 
   <header> 
-    <a href="https://portal.pas.ifsuldeminas.edu.br"><img  src="assets/IFLOGO.png" alt="" height="100px" width="100px"></a>
+    <a href="https://portal.pas.ifsuldeminas.edu.br"><img  src="assets/Logotipo_IFET.svg.png" alt="" height="100px" width="100px"></a>
     <div class="logo2"><img src="assets/facebook.png"  height="50px" width="50px">
       <img src="assets/instagram.png" alt="" height="50px" width="50px">
       <img src="assets/twitter.png" alt="" height="50px" width="50px">
