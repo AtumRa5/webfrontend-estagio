@@ -21,9 +21,9 @@
 
     <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
         <h1>Cadastro</h1>
-        <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)" >
-        <input type="password" name="senha" placeholder="Senha" class="text-input" id="criarsenha">
-        <input type="password" name="confirmarsenha" placeholder="Confirmar Senha" class="text-input" id="confirmarsenha">
+        <input type="text" name="txtRA" id="ra" class="text-input"placeholder="RA (Aluno)" >
+        <input type="password" name="txtSenha" placeholder="Senha" class="text-input" id="criarsenha">
+        <input type="password" name="txtConfirmarsenha" placeholder="Confirmar Senha" class="text-input" id="confirmarsenha">
         <div><input type="submit" value="Cadastrar">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
     </form>
