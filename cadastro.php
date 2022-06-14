@@ -18,6 +18,22 @@
 </header>
 
 <body>
+<?php
+       if (!isset($_GET["idusuario"])) { // Novo registro
+		$idUs = 0;
+		$titulo = "Cadastro de uma nova pessoa";
+    $ra = $senha = "";
+	} else { // Alteração de registro
+		$idUs = $_GET["idusuario"]; 
+		include_once("usuario.php");
+		$pessoa = retornaPessoaPorId($idUs);
+		if ($pessoa != null) { // Verifica se retornou um registro
+            $titulo = "Atualização dos dados da pessoa";
+            $ra = $pessoa["ra"];
+              $senha = $pessoa["senha"];
+          }
+      }
+      ?>
 
     <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
         <h1>Cadastro</h1>
@@ -29,7 +45,6 @@
     </form>
     
     <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $login = $_POST['ra'];
             $senha = $_POST['senha'];
             $confirmarsenha = $_POST['confirmarsenha'];

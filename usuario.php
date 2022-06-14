@@ -54,5 +54,13 @@ function retornausuario() {
         $conexao->query($sql); // Executa o comando SQL
         $conexao->close(); // Fecha a conexão com o BD 
     }
+    function exitirPessoa($ra){
+        $sql = "SELECT ra FROM tbusuario WHERE ra=$ra";
+        $conexao = abreConexao(); // Abre a conexão com o BD
+        $conexao->query($sql); // Executa o comando SQL
+        $conexao->close(); // Fecha a conexão com o BD 
+        if($ra!=null)
+        return 1;
+    }
     ?>
     
