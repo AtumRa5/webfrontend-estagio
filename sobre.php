@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleindex.css">
-    <title>Principal</title>
+    <title>Sobre</title>
 </head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@
 
             <div class="navbar-nav">
                 
-                <a class="nav-link" href="index.html">INICIO</a>
+                <a class="nav-link" href="index.php">INICIO</a>
             
         </div>
         <div class="navbar-nav">
@@ -29,7 +29,7 @@
       
         <div class="navbar-nav">
            
-                <a class="nav-link" href="curriculos.html">CURRICULOS</a>
+                <a class="nav-link" href="curriculos.php">CURRICULOS</a>
             
              </div>
             
@@ -44,7 +44,7 @@
             
               <div class="navbar-nav">
             
-                <a class="nav-link" href="datas.html">DATAS</a>
+                <a class="nav-link" href="datas.php">DATAS</a>
             </div>
             
             
@@ -57,7 +57,7 @@
           
             <div class="navbar-nav">
             
-                <a class="nav-link" href="vagas.html">VAGAS</a>
+                <a class="nav-link" href="vagas.php">VAGAS</a>
            
         </div>
            
@@ -65,13 +65,10 @@
            
             <div class="navbar-nav">
                     
-                    <a class="nav-link" href="ajuda.html">AJUDA</a>
+                    <a class="nav-link" href="ajuda.php">AJUDA</a>
                     
             </div>
             <button class="button1">Sair</button>
-            
-
-                
             
 
 
@@ -79,16 +76,7 @@
 
     </div>
 
-    <div class="sobre">
-        <h2>Pagina de Estagios - IFSULDEMINAS</h2>
-        <div class="sobredois" style="height:100px;"><h3>Seja bem-vindo a área de estágios do IFSULDEMINAS - Campus Passos!</h3>
-           <h3> O conteúdo está organizado em categorias, para navegar entre elas basta clicar nos itens de menu no topo da página. </h3>
-           
-
-           </div>
-           <button class="button">A DEFINIR</button>
-      </div>
-
+    
 
 
       <div class="footer">
