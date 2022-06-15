@@ -1,0 +1,4 @@
+$("#sair").click(function(){
+  
+    exit(); 
+});

@@ -90,42 +90,27 @@
                          
                          </tr>
                  </thead>
-                  <tbody>
-                            <tr>
-                              <td>Udemy</td>
-                             
-                          </tr>
-                          <tr class="active-row">
-                            <td>H4D1</td>
-                            
-                          </tr>
-                          <tr>
-                                <td>Th-Front</td>
-                              
-                            </tr>
-                            <tr class="active-row">
-                              <td>Perigo.INC</td>
-                             
-                            </tr>
+               
 
 
-                            <?php/* include_once("pessoa.php");
-                              $vetpessoas = retornaPessoas();
-                              if ($vetpessoas != null) {
-                                      foreach ($vetpessoas as $pessoa) {
-                                          $nome = $pessoa['nome'];
-                                          $telefone = $pessoa['telefone'];
-                                          $email = $pessoa['email'];
-                                          $idpessoa = $pessoa['idpessoa'];
-                              echo('<tr> <td>'.$nome.'</td> <td>'.$telefone.'</td>
-                              <td>'.$email.'</td> <td><a href="formulario.php?id='.$idpessoa.
-                              '" class="btn btn-primary">Alterar</a><a href="excluir.php?id='. $idpessoa.'" class="btn btn-danger" onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
+                            <?php include_once("cadastrarestagio.php");
+                              $vetestagio = retornaEstagio();
+                              if ( $vetestagio != null) {
+                                      foreach ( $vetestagio as $estagio) {
+                                          $nome = $estagio['nome'];
+                                          $area = $estagio['area'];
+                                          $empresa = $estagio['empresa'];
+                                          $idestagio = $estagio['idestagio'];
+                              echo('<tr> <td>'.$nome.'</td>
+                               <td>'. $area.'</td>
+                              <td>'.  $empresa.'</td>
+                               <td><a href="cadastrarestagio.php?id='.$idestagio'>Alterar</a><a href="excluirEstagio.php?id='. $idestagio.' onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
                                       } // fecha foreach
                                   } // fecha if
                                   else {
                                       echo("<tr><td>Nenhum registro encontrado!</td></tr>");
                                   }
-                               */?>
+                               ?>
                    
                         </tbody>
                  </table>

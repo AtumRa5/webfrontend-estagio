@@ -17,7 +17,7 @@
 
             <div class="navbar-nav">
                 
-                <a class="nav-link" href="index.html">INICIO</a>
+                <a class="nav-link" href="index.php">INICIO</a>
             
         </div>
         <div class="navbar-nav">
@@ -29,7 +29,7 @@
       
         <div class="navbar-nav">
            
-                <a class="nav-link" href="curriculos.html">CURRICULOS</a>
+                <a class="nav-link" href="curriculos.php">CURRICULOS</a>
             
              </div>
             
@@ -39,12 +39,12 @@
            
             <div class="navbar-nav">
             
-                <a class="nav-link" href="estagiosdisponiveis.html">ESTAGIOS</a>
+                <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
             </div>
             
               <div class="navbar-nav">
             
-                <a class="nav-link" href="datas.html">DATAS</a>
+                <a class="nav-link" href="datas.php">DATAS</a>
             </div>
             
             
@@ -57,7 +57,7 @@
           
             <div class="navbar-nav">
             
-                <a class="nav-link" href="vagas.html">VAGAS</a>
+                <a class="nav-link" href="vagas.php">VAGAS</a>
            
         </div>
            
@@ -65,7 +65,7 @@
            
             <div class="navbar-nav">
                     
-                    <a class="nav-link" href="ajuda.html">AJUDA</a>
+                    <a class="nav-link" href="ajuda.php">AJUDA</a>
                     
             </div>
             <button class="button1">Sair</button>

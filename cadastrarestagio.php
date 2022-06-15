@@ -18,15 +18,38 @@
 
 <body>
 
-    <form class="box" method="post" action=""> 
+
+
+<?php # Verifica se foi enviado algum ID
+	if (!isset($_GET["idestagio"])) { // Novo registro
+		$idestagio = 0;
+        $nome = "Cadastro de uma nova pessoa";
+    $nome = $area = $empresa = "";
+	} else { // Alteração de registro
+		$idestagio = $_GET["idEs"]; 
+		include_once("pessoa.php");
+		$idestagio = retornaEstagioPorId($idestagio);
+		if ($idestagio != null) { // Verifica se retornou um registro
+           
+            $nome = $idestagio["nome"];
+            $area = $idestagio["telefone"];
+              $empresa = $idestagio["email"];
+          }
+      }
+    include_once("topo.php"); 
+  ?>
+
+    <form class="box" method="POST" action="salvar.php"> 
         <h1>Cadastro de Estagio</h1>
-        <input type="text" name="area" id="area" class="text-input"placeholder="Área" >
-        <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome">
-        <input type="text" name="empresa" placeholder="Empresa" class="text-input" id="empresa">
-        <div><input type="submit" value="Cadastrar">
+        <input type="text" name="area" id="area" class="text-input"placeholder="Área" 	value="<?php echo($area); ?>" >
+        <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome" value="<?php echo($nome); ?>">
+        <input type="text" name="empresa" placeholder="Empresa" class="text-input" id="empresa" value="<?php echo($empresa); ?>">
+        <div><input type="submit" value="Cadastrar" onclick="alert('Dados salvos com sucesso!');">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
 
-        <?php
+        
+        
+        <?php /*
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $area = $_POST['area'];
             $nome = $_POST['nome'];
@@ -45,7 +68,7 @@
             if($verifuser == 1){
                 echo '<script>alert("O CNPJ digitado já está cadastrado!")</script>';
             }else */ //não é necessario
-            if($area == '' || $nome == '' || $empresa == ''){
+         /*   if($area == '' || $nome == '' || $empresa == ''){
                 echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
             }else{
                 
@@ -65,7 +88,7 @@
                 echo '<script>window.location.href = "index.html";</script>';
             }
         }
-    ?>
+  */  ?>
      
     </form>
 
