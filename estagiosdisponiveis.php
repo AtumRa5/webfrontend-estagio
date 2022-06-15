@@ -39,7 +39,7 @@
            
             <div class="navbar-nav">
             
-                <a class="nav-link" href="estagiosdisponiveis.html">ESTAGIOS</a>
+                <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
             </div>
             
               <div class="navbar-nav">
@@ -69,6 +69,8 @@
                     
             </div>
             <button class="button1">Sair</button>
+            
+         
 
                 
             
@@ -76,7 +78,11 @@
 
         </nav>
 
+      
+   
+     
         <div class="tabela">
+ 
                 <table class="styled-table" border="2">
                         <thead>
                           <tr>        
@@ -101,11 +107,31 @@
                               <td>Perigo.INC</td>
                              
                             </tr>
+
+
+                            <?php/* include_once("pessoa.php");
+                              $vetpessoas = retornaPessoas();
+                              if ($vetpessoas != null) {
+                                      foreach ($vetpessoas as $pessoa) {
+                                          $nome = $pessoa['nome'];
+                                          $telefone = $pessoa['telefone'];
+                                          $email = $pessoa['email'];
+                                          $idpessoa = $pessoa['idpessoa'];
+                              echo('<tr> <td>'.$nome.'</td> <td>'.$telefone.'</td>
+                              <td>'.$email.'</td> <td><a href="formulario.php?id='.$idpessoa.
+                              '" class="btn btn-primary">Alterar</a><a href="excluir.php?id='. $idpessoa.'" class="btn btn-danger" onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
+                                      } // fecha foreach
+                                  } // fecha if
+                                  else {
+                                      echo("<tr><td>Nenhum registro encontrado!</td></tr>");
+                                  }
+                               */?>
                    
                         </tbody>
                  </table>
 
-                 <button class="button">Mostrar Mais</button>
+                 <button class="button">Cadastrar Estagio</button>
+                 
         </div>
 
     </div>

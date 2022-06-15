@@ -95,10 +95,35 @@ body {
     transition-duration: 0.4s;
   }
 
+  .button4 {
+    background-color: #2ccc51;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    margin: 25px 630px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+
   .button:hover {
     background-color: #fefefe;
     color: rgb(0, 0, 0);
     border: 2px solid #4CAF50;
+   
+    
+  }
+
+  .button4:hover {
+    background-color: #fefefe;
+    color: rgb(0, 0, 0);
+    border: 2px solid #4CAF50;
+   
     
   }
 
