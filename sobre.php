@@ -9,76 +9,37 @@
 </head>
 <body>
     <div class="container">
-
         <nav class="navbar">
             <a class="navbar-brand" href="https://portal.ifsuldeminas.edu.br/index.php">
-            <img src="assets/IFLOGO.png"  height="100px" width="100px">
+                <img src="assets/IFLOGO.png"  height="100px" width="100px">
             </a>
-
-            <div class="navbar-nav">
-                
-                <a class="nav-link" href="index.php">INICIO</a>
-            
-        </div>
-        <div class="navbar-nav">
-           
-                <a class="nav-link" href="noticias.html">NOTICIAS</a>
-            
-        </div>
-     
-      
-        <div class="navbar-nav">
-           
-                <a class="nav-link" href="curriculos.php">CURRICULOS</a>
-            
-             </div>
-            
-           
-           
-           
-           
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
-            </div>
-            
-              <div class="navbar-nav">
-            
-                <a class="nav-link" href="datas.php">DATAS</a>
-            </div>
-            
-            
-            
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="empresas.php">EMPRESAS</a>
-            </div>      
-           
-          
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="vagas.php">VAGAS</a>
-           
-        </div>
-           
-           
-           
-            <div class="navbar-nav">
-                    
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.php">INICIO</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="noticias.html">NOTICIAS</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="curriculos.php">CURRICULOS</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="datas.php">DATAS</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="empresas.php">EMPRESAS</a>
+                </div>      
+                <div class="navbar-nav">
+                    <a class="nav-link" href="vagas.php">VAGAS</a>
+                </div>
+                <div class="navbar-nav">
                     <a class="nav-link" href="ajuda.php">AJUDA</a>
-                    
-            </div>
-            <button class="button1">Sair</button>
-            
-
-
+                </div>
+                    <button class="button1">Sair</button>
         </nav>
-
     </div>
-
-    
-
-
       <div class="footer">
         <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.
 
@@ -88,8 +49,7 @@
          <img src="assets/twitter.png" alt="" height="50px" width="50px">
          <img src="assets/whatsapp.png" alt="" height="50px" width="50px">
          <img src="assets/facebook.png"  height="50px" width="50px">
-      </div>
-    
+      </div>   
 </body>
 </html>
 

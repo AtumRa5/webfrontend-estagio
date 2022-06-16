@@ -9,107 +9,63 @@
 </head>
 <body>
     <div class="container">
-
-        <nav class="navbar">
-            <a class="navbar-brand" href="https://portal.ifsuldeminas.edu.br/index.php">
+      <nav class="navbar">
+          <a class="navbar-brand" href="https://portal.ifsuldeminas.edu.br/index.php">
             <img src="assets/IFLOGO.png"  height="100px" width="100px">
-            </a>
-
-            <div class="navbar-nav">
-                
-                <a class="nav-link" href="index.php">INICIO</a>
-            
+          </a>
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.php">INICIO</a>
         </div>
         <div class="navbar-nav">
-           
-                <a class="nav-link" href="noticias.html">NOTICIAS</a>
-            
+          <a class="nav-link" href="noticias.html">NOTICIAS</a>
         </div>
-     
-      
         <div class="navbar-nav">
-           
-                <a class="nav-link" href="curriculos.php">CURRICULOS</a>
-            
-             </div>
-            
-           
-           
-           
-           
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
-            </div>
-            
-              <div class="navbar-nav">
-            
-                <a class="nav-link" href="datas.php">DATAS</a>
-            </div>
-            
-            
-            
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="empresas.php">EMPRESAS</a>
-            </div>      
-           
-          
-            <div class="navbar-nav">
-            
-                <a class="nav-link" href="vagas.php">VAGAS</a>
-           
+          <a class="nav-link" href="curriculos.php">CURRICULOS</a>
         </div>
-           
-           
-           
-            <div class="navbar-nav">
-                    
-                    <a class="nav-link" href="ajuda.php">AJUDA</a>
-                    
-            </div>
-            <button class="button1">Sair</button>
-                
-            
-
-
-        </nav>
-
-        <div class="tabela">
-                <table class="styled-table" border="2">
-                        <thead>
-                          <tr>        
-                          <th>Estagio</th>
-                          <th>Vagas</th>
-                         </tr>
-                 </thead>
-                  <tbody>
-                            <tr>
-                              <td>Udemy</td>
-                             <td>2.802</td>
-                          </tr>
-                          <tr class="active-row">
-                            <td>H4D1</td>
-                            <td>10.345</td>
-                          </tr>
-                          <tr class="active-row">
-                                <td>Perigo.INC</td>
-                                <td>7.905</td>
-                              </tr>
-                              
-                   
-                        </tbody>
-                 </table>
-
-                 <button class="button">Mostrar Mais</button>
+        <div class="navbar-nav">
+          <a class="nav-link" href="estagiosdisponiveis.php">ESTAGIOS</a>
         </div>
-
+        <div class="navbar-nav">
+          <a class="nav-link" href="datas.php">DATAS</a>
+        </div>
+        <div class="navbar-nav">
+          <a class="nav-link" href="empresas.php">EMPRESAS</a>
+        </div>      
+        <div class="navbar-nav">
+          <a class="nav-link" href="vagas.php">VAGAS</a>
+        </div>
+        <div class="navbar-nav">
+        <a class="nav-link" href="ajuda.php">AJUDA</a>
+        </div>
+          <button class="button1">Sair</button>
+      </nav>
+      <div class="tabela">
+        <table class="styled-table" border="2">
+            <thead>
+              <tr>        
+                <th>Estagio</th>
+                <th>Vagas</th>
+              </tr>
+            </thead>
+          <tbody>
+              <tr>
+                <td>Udemy</td>
+                <td>2.802</td>
+              </tr>
+            <tr class="active-row">
+              <td>H4D1</td>
+              <td>10.345</td>
+            </tr>
+            <tr class="active-row">
+              <td>Perigo.INC</td>
+              <td>7.905</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="button">Mostrar Mais</button>
+      </div>
     </div>
-
-    
-
-
-      <div class="footer">
+    <div class="footer">
         <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.
 
          DTIC - Diretoria de Tecnologia da Informação e Comunicações - Reitoria - 2015 - 2022.</p>
@@ -118,8 +74,7 @@
          <img src="assets/twitter.png" alt="" height="50px" width="50px">
          <img src="assets/whatsapp.png" alt="" height="50px" width="50px">
          <img src="assets/facebook.png"  height="50px" width="50px">
-      </div>
-    
+      </div>   
 </body>
 </html>
 
