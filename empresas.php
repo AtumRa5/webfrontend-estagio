@@ -9,7 +9,6 @@
   </head>
 
   <body>
-  
     <div class="container">
       <nav class="navbar">
         <a class="navbar-brand" href="https://portal.ifsuldeminas.edu.br/index.php">
@@ -116,6 +115,7 @@
           <img src="assets/whatsapp.png" alt="" height="50px" width="50px">
           <img src="assets/facebook.png"  height="50px" width="50px">
         </div>
+
       </div>
     </div>
   </body>
