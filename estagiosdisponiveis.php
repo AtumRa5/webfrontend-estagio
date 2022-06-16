@@ -71,7 +71,7 @@
                                 <td><a href="cadastrarestagio.php?id='. $idestagio .'>Alterar</a><a href="excluirEstagio.php?id=' .$idestagio. ' onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
                             }
                         }else{
-                            echo("<tr><td>Nenhum registro encontrado!</td></tr>");
+                            echo "<tr><td>Nenhum registro encontrado!</td></tr>";
                         }
                     ?>
                    
