@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+    session_destroy();
+
+?>
 <html lang="pt-br">
 
   <head>
@@ -19,39 +25,31 @@
   </header>
 
   <body>
+  
 
-    <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    <form class="box" action="valida.php" method="POST">
       <h1>LogIn</h1>
       <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)" >
       <input type="password" name="senha" placeholder="Senha" class="text-input" id="senha">
       <input type="submit" value="Entrar">
       <input type="button" name="cad" value="Cadastrar-se" id="cad">
-    </form>
 
+    
+        <p>
+
+            <?php
+                if ($_GET["mensagem"] == 'td')
+                echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
+                else if($_GET["mensagem"] == 'ui')
+                echo '<script>alert("Usuário ou senha incorretos!")</script>';
+            ?>
+
+        </p>
+</form>
     <?php
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $login = $_POST['ra'];
-        $senha = $_POST['senha'];
-        $verif = 0;
 
-        if($login == '' || $senha == ''){
-          echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
-        }else{
-          $arquivo = file_get_contents('arqJson/user.json');
-          $dados = json_decode($arquivo, true);
-
-          foreach($dados['cadastros'] as $cadastros){
-              if($cadastros['RA'] == $login && $cadastros['senha'] == $senha)
-                  $verif = 1;
-          }
-
-          if($verif == 1)
-            header("Location: index.html");
-          else{
-            echo '<script>alert("Usuário ou senha incorretos!")</script>';
-          }
-        }
-      }
+        
+      
     ?>
 
   </body>

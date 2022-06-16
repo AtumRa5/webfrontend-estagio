@@ -54,13 +54,31 @@ function retornausuario() {
         $conexao->query($sql); // Executa o comando SQL
         $conexao->close(); // Fecha a conexão com o BD 
     }
-    function exitirPessoa($ra){
-        $sql = "SELECT ra FROM tbusuario WHERE ra=$ra";
+    function existirPessoa($ra){
+        $sql = "SELECT ra FROM tbusuario WHERE ra='".$ra."';";
         $conexao = abreConexao(); // Abre a conexão com o BD
         $conexao->query($sql); // Executa o comando SQL
+        $resultado = $conexao->query($sql);
         $conexao->close(); // Fecha a conexão com o BD 
-        if($ra!=null)
-        return 1;
+        if (mysqli_num_rows($resultado) > 0) {
+           $usuario = mysqli_fetch_array($resultado);
+            return $usuario;
+       } else {
+            return null;
+       } 
+    }
+
+    function validaUsuario($user, $senha) {
+        $sql = "SELECT * FROM tbusuario WHERE usuario = '".$ra."' AND senha = '".$senha."';";
+        $conexao = abreConexao(); // Abre a conexão com o BD
+        $resultado2 = $conexao->query($sql);
+        $conexao->close(); // Fecha a conexão com o BD
+        if (mysqli_num_rows($resultado2) > 0) {
+            $usuario = mysqli_fetch_array($resultado2);
+             return $usuario;
+        } else {
+             return null;
+        } 
     }
     ?>
     
