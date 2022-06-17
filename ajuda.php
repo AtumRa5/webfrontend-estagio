@@ -16,6 +16,7 @@ if($_SESSION['login'] == true){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleindex.css">
+    <script src="scripts/sair.js"></script>
     <title>Ajuda</title>
 </head>
 <body>
@@ -28,7 +29,7 @@ if($_SESSION['login'] == true){
                 <a class="nav-link" href="index.php">INICIO</a>
             </div>
             <div class="navbar-nav">
-                <a class="nav-link" href="noticias.html">NOTICIAS</a>
+                <a class="nav-link" href="noticias.php">NOTICIAS</a>
             </div>
             <div class="navbar-nav">
                 <a class="nav-link" href="curriculos.php">CURRICULOS</a>
@@ -48,9 +49,16 @@ if($_SESSION['login'] == true){
            <div class="navbar-nav">
                 <a class="nav-link" href="ajuda.php">AJUDA</a>
             </div>
-                <button class="button1">Sair</button>
-
+            <button class="button1" name="sair" id="sair" value="sair" onclick="sair()">Sair</button>
         </nav>
+    </div>
+    <div class="sobre">
+        <h2>A Ouvidoria</h2>
+            <div class="sobredois" style="height:100px;">
+                <h3>Cabe a Ouvidoria atuar como representante imparcial da comunidade acadêmica e da sociedade. 
+                    Seu compromisso é facilitar o acesso do cidadão ao IFSULDEMINAS. Ela valoriza a democracia, age de forma ética,
+                     com respeito por toda a comunidade e também possui a responsabilidade de analisar a qualidade do serviço prestado
+                      pelo IFSULDEMINAS</h3>        
     </div>
       <div class="footer">
         <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.

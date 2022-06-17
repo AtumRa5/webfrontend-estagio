@@ -15,6 +15,9 @@ if($_SESSION['login'] == true){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styleempresas.css">
+        <script src="scripts/reddit.js"></script>
+        <script src="scripts/sair.js"></script>
+        <script src="scripts/excluir.js"></script>
         <title>Estagios Disponiveis</title>
     </head>
     
@@ -57,7 +60,7 @@ if($_SESSION['login'] == true){
                     <a class="nav-link" href="ajuda.php">AJUDA</a>
                 </div>
             
-                <button class="button1">Sair</button>
+                <button class="button1" name="sair" id="sair" value="sair" onclick="sair()">Sair</button>
             </nav>
 
             <div class="tabela">
@@ -97,7 +100,9 @@ if($_SESSION['login'] == true){
                     </tbody>
                  </table>
 
-                 <button class="button">Cadastrar Estagio</button>
+                 <button class="button" name="reddit" id="reddit" value="reddit" onclick="reddit()">Cadastrar Estagio</button>
+                 <button class="button" name="excluir" id="excluir value="excluir" onclick="excluir()">Excluir Estagio</button>
+                
                  
         </div>
 

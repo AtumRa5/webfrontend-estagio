@@ -1,4 +1,3 @@
-$("#sair").click(function(){
-  
-    exit(); 
-});
+function sair(){
+    window.location.href = "login.php"
+  }

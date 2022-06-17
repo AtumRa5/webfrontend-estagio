@@ -1,10 +1,12 @@
-<<html lang="pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excluir Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/wtf.js"></script>
+    <script src="scripts/sair.js"></script>
     <script src="scripts/cadastro.js" defer></script>
 </head>
 
@@ -20,7 +22,7 @@
 <body>
 
     <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
-        <h1>Excluir Estagio</h1>
+        <h1>Excluir Empresa</h1>
         <input type="text" name="cnpj" id="cnpj" class="text-input"placeholder="CNPJ" >
         <div><input type="submit" value="Excluir">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>

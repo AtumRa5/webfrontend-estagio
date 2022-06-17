@@ -13,6 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleempresas.css">
+    <script src="scripts/sair.js"></script>
+    <script src="scripts/reddit.js"></script>
+    <script src="scripts/excluir.js"></script>
     <title>Empresas</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
@@ -56,7 +59,7 @@
           <a class="nav-link" href="ajuda.php">AJUDA</a>
         </div>
           
-        <button class="button1">Sair</button>
+        <button class="button1" name="sair" id="sair" value="sair" onclick="sair()">Sair</button>
 
       </nav>
 
@@ -89,6 +92,10 @@
           // imprimir tabela
           echo $table;
         ?>
+
+                <button class="button" name="reddit" id="reddit" value="reddit" onclick="cempresa()">Cadastrar Empresa</button>
+                <button class="button" name="excluir" id="excluir" value="excluir" onclick="lixo()">Excluir Empresa</button>
+                
       </div>
 
       <div class="myChart" id="myChart" style="width:100%; max-width:600px; height:500px;"></div>

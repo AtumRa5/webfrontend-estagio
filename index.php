@@ -48,7 +48,7 @@ if($_SESSION['login'] == true){
            <div class="navbar-nav">
                 <a class="nav-link" href="ajuda.php">AJUDA</a>
             </div>
-                <button type ="button" class="button1" id="sair" >  Sair</button>
+            <button class="button1" name="sair" id="sair" value="sair" onclick="sair()">Sair</button>
         </nav>
     </div>
     <div class="sobre">
@@ -57,7 +57,7 @@ if($_SESSION['login'] == true){
                 <h3>Seja bem-vindo a área de estágios do IFSULDEMINAS - Campus Passos!</h3>
                 <h3> O conteúdo está organizado em categorias, para navegar entre elas basta clicar nos itens de menu no topo da página. </h3>
             </div>
-            <button class="button">A DEFINIR</button>
+           
     </div>
     <div class="footer">
         <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.

@@ -4,6 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastrarEmpresa</title>
+    <script src="scripts/wtf.js"></script>
+    <script src="scripts/sair.js"></script>
     <link rel="stylesheet" href="css/stylecadastrarempresa.css">
 </head>
 
@@ -24,7 +26,7 @@
         <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome">
         
         <div><input type="submit" value="Cadastrar">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <input type="button" name="voltar" value="Voltar" id="voltar" onclick="ftw()"></div>
 
      
     </form>

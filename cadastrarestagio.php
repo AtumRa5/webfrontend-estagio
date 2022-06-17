@@ -4,6 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastrarEstagio</title>
+    <script src="scripts/wtf.js"></script>
+    <script src="scripts/sair.js"></script>
     <link rel="stylesheet" href="css/stylecadastrarempresa.css">
 </head>
 
@@ -48,7 +50,8 @@
         <input type="text" name="empresa" placeholder="Empresa" class="text-input" id="empresa" value="<?php echo($empresa); ?>">
         <input type="text" name="cnpj" id="cnpj" class="text-input"placeholder="CNPJ" >
         <div><input type="submit" value="Cadastrar" onclick="alert('Dados salvos com sucesso!');">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <input type="button" name="voltar" value="Voltar" id="voltar" onclick="wtf()"></div>
+        
 
         
         
@@ -89,7 +92,7 @@
                 file_put_contents('arqJson/estagios.json', json_encode($dados));
 
                 echo '<script>alert("Cadastro realizado com sucesso!")</script>';
-                echo '<script>window.location.href = "index.html";</script>';
+                echo '<script>window.location.href = "index.php";</script>';
             }
         }
     ?>

@@ -16,7 +16,7 @@ if($_SESSION['login'] == true){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylenot.css">
-    
+    <script src="scripts/sair.js"></script>
     <title>Noticias</title>
 </head>
 <body>
@@ -49,7 +49,7 @@ if($_SESSION['login'] == true){
         <div class="navbar-nav">
           <a class="nav-link" href="ajuda.php">AJUDA</a>
         </div>
-          <button class="button1">Sair</button>
+        <button class="button1" name="sair" id="sair" value="sair" onclick="sair()">Sair</button>
       </nav>
       <div class="slideshow-container">
         <div class="mySlides fade">
