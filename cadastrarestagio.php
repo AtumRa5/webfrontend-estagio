@@ -46,6 +46,7 @@
         <input type="text" name="area" id="area" class="text-input"placeholder="Área" 	value="<?php echo($area); ?>" >
         <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome" value="<?php echo($nome); ?>">
         <input type="text" name="empresa" placeholder="Empresa" class="text-input" id="empresa" value="<?php echo($empresa); ?>">
+        <input type="text" name="cnpj" id="cnpj" class="text-input"placeholder="CNPJ" >
         <div><input type="submit" value="Cadastrar" onclick="alert('Dados salvos com sucesso!');">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
 
@@ -56,6 +57,7 @@
             $area = $_POST['area'];
             $nome = $_POST['nome'];
             $empresa = $_POST['empresa'];
+            $cnpj = $_POST['cnpj'];
 
             $verifuser = 0; // Verifica se o usuário já existe no json
             
@@ -69,8 +71,8 @@
 
             if($verifuser == 1){
                 echo '<script>alert("O CNPJ digitado já está cadastrado!")</script>';
-            }else */ //não é necessario
-           if($area == '' || $nome == '' || $empresa == ''){
+            }else
+           if($cnpj = ''|| $area == '' || $nome == '' || $empresa == ''){
                 echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
             }else{
                 
@@ -81,7 +83,7 @@
                 }
 
                 // adiciona dados
-                $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa'=>$empresa);
+                $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa'=>$empresa ,'cnpj'=>$cnpj);
 
                 // encoda o json e salva no arquivo
                 file_put_contents('arqJson/estagios.json', json_encode($dados));
