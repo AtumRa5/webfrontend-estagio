@@ -57,7 +57,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
+                    <?php include_once("funEstagio.php");
                         $vetestagio = retornaEstagio();
                         if( $vetestagio != null){
                             foreach($vetestagio as $estagio){

@@ -27,7 +27,7 @@
     $nome = $area = $empresa = "";
 	} else { // Alteração de registro
 		$idestagio = $_GET["idEs"]; 
-		include_once("pessoa.php");
+		include_once("funEstagio.php");
 		$idestagio = retornaEstagioPorId($idestagio);
 		if ($idestagio != null) { // Verifica se retornou um registro
            
@@ -36,7 +36,7 @@
               $empresa = $idestagio["email"];
           }
       }
-    include_once("topo.php"); 
+    
   ?>
 
     <form class="box" method="POST" action="salvar.php"> 

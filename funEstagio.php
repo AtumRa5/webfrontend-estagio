@@ -1,7 +1,7 @@
 <?php 
 
 include_once("conecta.php"); // Inclui a classe conecta
-function retornaestagio() {
+function retornaEstagio() {
 	$sql = "SELECT * FROM tbestagios ORDER BY nome";
 	$conexao = abreConexao(); # Abre a conexão com o BD
 	$resultado = $conexao->query($sql);
@@ -16,7 +16,7 @@ function retornaestagio() {
 	} }
 
     function retornaEstagioPorId($idEs) {
-        $sql = "SELECT * FROM tbestagios WHERE idestagios = ".$idUs;
+        $sql = "SELECT * FROM tbestagios WHERE idestagios = ".$idEs;
         $conexao = abreConexao(); // Abre a conexão com o BD
         $resultado = $conexao->query($sql);
         $conexao->close(); // Fecha a conexão com o BD
