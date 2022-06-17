@@ -3,9 +3,9 @@
         include_once("estagiosdisponiveis.php");
         
 		$idestagio = $_POST["idEs"];
-		$nome = $_POST["txtNome"];
-        $area = $_POST["txtArea"];
-        $empresa = $_POST["txtEmpresa"];
+		$nome = $_POST["nome"];
+        $area = $_POST["area"];
+        $empresa = $_POST["empresa"];
 		if ($idestagio == 0) { 
 			insereEstagio($nome, $area, $empresa);
 		} else { 	

@@ -10,5 +10,5 @@
 		} else { 	// Atualiza cadastro existente
 			alteraUsuario($ra,$senha,$idUs);
 		}
-		header("location:cadastro.php");//onde ficara localizada a tabela
+		
  ?>

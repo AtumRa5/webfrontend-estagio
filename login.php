@@ -47,11 +47,74 @@
 
         </p>
 </form>
-    <?php
 
-        
+    <?php
+/*
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $login = $_POST['ra'];
+  $senha = $_POST['senha'];
+  $verif = 0;
+
+  if($login == '' || $senha == ''){
+    echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
+  }else{
+    $arquivo = file_get_contents('arqJson/user.json');
+    $dados = json_decode($arquivo, true);
+
+    foreach($dados['cadastros'] as $cadastros){
+        if($cadastros['RA'] == $login && $cadastros['senha'] == $senha)
+            $verif = 1;
+    }
+
+    if($verif == 1)
+      header("Location: index.html");
+    else{
+      echo '<script>
+      function customMessage(typeError) {
+        const messages = {
+            text: {
+                valueMissing: "Por favor, preencha este campo"
+            },
+            password: {
+                valueMissing: "Senha é obrigatória"
+                
+            }
+        }
+
+        return messages[field.type][typeError];
+    }
+    function setCustomMessage(message) {
+      const spanError = field.parentNode.querySelector("span.error")
       
-    ?>
+      if (message) {
+          spanError.classList.add("active");
+          spanError.innerHTML = message;
+      } else {
+          spanError.classList.remove("active");
+          spanError.innerHTML = "";
+      }
+  }
+
+  return function() {
+
+      const error = verifyErrors();
+
+      if(error) {
+          const message = customMessage(error);
+
+          field.style.borderColor = "red";
+          setCustomMessage(message);
+      } else {
+          field.style.borderColor = "green";
+          setCustomMessage();
+      }
+  }
+      </script>';
+    }
+  }
+}
+      
+   */ ?>
 
   </body>
   
