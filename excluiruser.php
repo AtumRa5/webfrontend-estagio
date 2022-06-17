@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Cadastro</title>
+    <title>Excluir Usuario</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/cadastro.js" defer></script>
 </head>
@@ -20,7 +20,7 @@
 <body>
 
     <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
-        <h1>Excluir Cadastro</h1>
+        <h1>Excluir Usuario</h1>
         <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)">
         <div><input type="submit" value="Excluir">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
@@ -30,7 +30,6 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $login = $_POST['ra'];
             $verifuser = 0;
-            $user = -1;
             
             $arquivo = file_get_contents('arqJson/user.json');
             $dados = json_decode($arquivo, true);
@@ -43,21 +42,26 @@
 
                 foreach($dados['cadastros'] as $cadastros){
                     if($cadastros['RA'] == $login){
+                        $verifuser = 1;
                         break;
                     }
                     $count++;
                 }
                 
-                $login = '';
-                $senha = '';
+                if($verifuser == 1){
+                    $login = '';
+                    $senha = '';
 
-                $dados['cadastros'][$count] = array('RA'=>$login, 'senha'=>$senha);
+                    $dados['cadastros'][$count] = array('RA'=>$login, 'senha'=>$senha);
 
-                // encoda o json e salva no arquivo
-                file_put_contents('arqJson/user.json', json_encode($dados));
+                    // encoda o json e salva no arquivo
+                    file_put_contents('arqJson/user.json', json_encode($dados));
 
-                echo '<script>alert("Exclusao realizado com sucesso!")</script>';
-                echo '<script>window.location.href = "login.php";</script>';
+                    echo '<script>alert("Exclusao realizada com sucesso!")</script>';
+                    echo '<script>window.location.href = "cadastro.php";</script>';
+                }else{
+                    echo '<script>alert("RA nao cadastrado!")</script>';
+                }
             }
         }
     ?>
