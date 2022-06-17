@@ -1,14 +1,12 @@
 <?php
-session_start();
-
-
-if($_SESSION['login'] == true){
-    
-}else{
-    
+  session_start();
+  if($_SESSION['login'] == true){ 
+  
+  }else{
     header("Location:login.php?mensagem=nl");
-}
+  }
 ?>
+
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
@@ -66,7 +64,8 @@ if($_SESSION['login'] == true){
         <?php
           $arquivo = file_get_contents('arqJson/empresas.json');
           $dados = json_decode($arquivo);
-           //montagem do html da tabela
+
+          //montagem do html da tabela
           $table  = '<table class="styled-table" border="2">';
           $table .= '<thead>';
           $table .= '<tr>';
@@ -83,35 +82,28 @@ if($_SESSION['login'] == true){
             $table .= '</tr>';
           }
 
-          // fecahamento do html
+          // fechar tabela
           $table .= '</tbody>';
           $table .= '</table>';
 
-          // exibição na tela
+          // imprimir tabela
           echo $table;
         ?>
-        
-      
-                          
-        </div>
-          <div class="myChart" id="myChart" style="width:100%; max-width:600px; height:500px;">
-          </div>
-          <script src="scripts/empresas.js"></script>
-        </div>
-        
-        <div class="footer">
-          <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.
-
-          DTIC - Diretoria de Tecnologia da Informação e Comunicações - Reitoria - 2015 - 2022.</p>
-
-          <img src="assets/instagram.png" alt="" height="50px" width="50px">
-          <img src="assets/twitter.png" alt="" height="50px" width="50px">
-          <img src="assets/whatsapp.png" alt="" height="50px" width="50px">
-          <img src="assets/facebook.png"  height="50px" width="50px">
-        </div>
-
       </div>
+
+      <div class="myChart" id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
+      <script src="scripts/empresas.js"></script>
     </div>
+        
+    <div class="footer">
+      <p>Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais.
+      DTIC - Diretoria de Tecnologia da Informação e Comunicações - Reitoria - 2015 - 2022.</p>
+      <img src="assets/instagram.png" alt="" height="50px" width="50px">
+      <img src="assets/twitter.png" alt="" height="50px" width="50px">
+      <img src="assets/whatsapp.png" alt="" height="50px" width="50px">
+      <img src="assets/facebook.png"  height="50px" width="50px">
+    </div>
+
   </body>
 </html>
 
