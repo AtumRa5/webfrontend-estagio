@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    session_destroy();
+    
 
 ?>
 <html lang="pt-br">
@@ -46,26 +46,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $login = $_POST['ra'];
   $senha = $_POST['senha'];
   $verif = 0;
-
+  $_SESSION['login'] = true;
   if($login == '' || $senha == ''){
+    $_SESSION['login'] = false;
     echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
   }else{
+    $_SESSION['login'] = true;
     $arquivo = file_get_contents('arqJson/user.json');
     $dados = json_decode($arquivo, true);
 
     foreach($dados['cadastros'] as $cadastros){
-        if($cadastros['RA'] == $login && $cadastros['senha'] == $senha)
+        if($cadastros['RA'] == $login && $cadastros['senha'] == $senha){
             $verif = 1;
+    }
     }
 
     if($verif == 1)
-      header("Location: index.html");
+      header("Location: index.php");
     else{
+      $_SESSION['login'] = false;
       echo '<script>alert("Usuario ou senha incorretos!")</script>';
     }
   }
 }
-      
+      exit(1);
     ?>
 
   </body>
