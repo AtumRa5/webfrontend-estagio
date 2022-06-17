@@ -21,16 +21,15 @@
 
     <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
         <h1>Excluir Estagio</h1>
-        <input type="text" name="cnpj" id="cnpj" class="text-input"placeholder="CNPJ" >
+        <input type="text" name="area" id="area" class="text-input" placeholder="Area" >
         <div><input type="submit" value="Excluir">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <input type="button" onclick="window.location.href = 'estagiosdisponiveis.php'" value="Voltar"></div>
     </form>
     
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
-            $login = $_POST['cnpj'];
+            $login = $_POST['area'];
             $verifuser = 0;
-            $user = -1;
             
             $arquivo = file_get_contents('arqJson/estagios.json');
             $dados = json_decode($arquivo, true);
@@ -42,24 +41,29 @@
                 $count=0;
 
                 foreach($dados['cadastros'] as $cadastros){
-                    if($cadastros['cnpj'] == $login){
+                    if($cadastros['area'] == $login){
+                        $verifuser = 1;
                         break;
                     }
                     $count++;
                 }
                 
-				$area = '';
-				$nome = '';
-				$empresa = '';
-				$cnpj = '';
+                if($verifuser == 1){
+                    $area = '';
+                    $nome = '';
+                    $empresa = '';
+                    $cnpj = '';
 
-                $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa' => $empresa , 'cnpj' => $cnpj);
+                    $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa' => $empresa , 'cnpj' => $cnpj);
 
-                // encoda o json e salva no arquivo
-                file_put_contents('arqJson/estagio.json', json_encode($dados));
+                    // encoda o json e salva no arquivo
+                    file_put_contents('arqJson/estagio.json', json_encode($dados));
 
-                echo '<script>alert("Exclusao realizado com sucesso!")</script>';
-                echo '<script>window.location.href = estagiosdisponiveis.php";</script>';
+                    echo '<script>alert("Exclusao realizado com sucesso!")</script>';
+                    echo '<script>window.location.href = "estagiosdisponiveis.php";</script>';
+                }else{
+                    echo '<script>alert("Estagio nao cadastrado!")</script>';
+                }
             }
         }
     ?>

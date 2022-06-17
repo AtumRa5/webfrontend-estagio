@@ -23,7 +23,7 @@
         <h1>Excluir Usuario</h1>
         <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)">
         <div><input type="submit" value="Excluir">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <input type="button" onclick="window.location.href = 'cadastro.php'" value="Voltar"></div>
     </form>
     
     <?php

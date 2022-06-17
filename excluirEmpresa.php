@@ -25,14 +25,13 @@
         <h1>Excluir Empresa</h1>
         <input type="text" name="cnpj" id="cnpj" class="text-input"placeholder="CNPJ" >
         <div><input type="submit" value="Excluir">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <input type="button" onclick="window.location.href = 'empresas.php'" value="Voltar"></div>
     </form>
     
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $login = $_POST['cnpj'];
             $verifuser = 0;
-            $user = -1;
             
             $arquivo = file_get_contents('arqJson/empresas.json');
             $dados = json_decode($arquivo, true);
@@ -45,22 +44,26 @@
 
                 foreach($dados['cadastros'] as $cadastros){
                     if($cadastros['cnpj'] == $login){
+                        $verifuser = 1;
                         break;
                     }
                     $count++;
                 }
                 
-				
-				$nome = '';
-				$cnpj = '';
+				if($verifuser == 1){
+                    $nome = '';
+                    $cnpj = '';
 
-                $dados['cadastros'][$count] = array( 'nome'=>$nome, 'cnpj' => $cnpj);
+                    $dados['cadastros'][$count] = array( 'nome'=>$nome, 'cnpj' => $cnpj);
 
-                // encoda o json e salva no arquivo
-                file_put_contents('arqJson/empresas.json', json_encode($dados));
+                    // encoda o json e salva no arquivo
+                    file_put_contents('arqJson/empresas.json', json_encode($dados));
 
-                echo '<script>alert("Exclusao realizado com sucesso!")</script>';
-                echo '<script>window.location.href = empresas.php";</script>';
+                    echo '<script>alert("Exclusao realizado com sucesso!")</script>';
+                    echo '<script>window.location.href = "empresas.php";</script>';
+                }else{
+                    echo '<script>alert("Empresa nao cadastrada!")</script>';
+                }
             }
         }
     ?>
