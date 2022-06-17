@@ -6,6 +6,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/cadastro.js" defer></script>
+    <script src="scripts/excluir.js"></script>
 </head>
 
 <header> 
@@ -25,6 +26,7 @@
         <input type="password" name="senha" placeholder="Senha" class="text-input" id="criarsenha">
         <input type="password" name="confirmarsenha" placeholder="Confirmar Senha" class="text-input" id="confirmarsenha">
         <div><input type="submit" value="Cadastrar">
+        <input type="button" name="excluirUs" value="Excluir" id="excluirUs" onclick="hhh()">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
     </form>
     
