@@ -27,29 +27,21 @@
   <body>
   
 
-    <form class="box" action="valida.php" method="POST">
+  <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
       <h1>LogIn</h1>
       <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)" >
+      <span class="error"></span>
       <input type="password" name="senha" placeholder="Senha" class="text-input" id="senha">
+      <span class="error"></span>
       <input type="submit" value="Entrar">
       <input type="button" name="cad" value="Cadastrar-se" id="cad">
 
     
-        <p>
-
-            <?php
-            
-                if ($_GET["mensagem"] == 'nl'){
-                echo '<script>alert("Login é obrigatorio!!")</script>';
-                }else if($_GET["mensagem"] == 'ui')
-                echo '<script>alert("Usuário ou senha incorretos!")</script>';
-            ?>
-
-        </p>
+        
 </form>
 
     <?php
-/*
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $login = $_POST['ra'];
   $senha = $_POST['senha'];
@@ -69,52 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($verif == 1)
       header("Location: index.html");
     else{
-      echo '<script>
-      function customMessage(typeError) {
-        const messages = {
-            text: {
-                valueMissing: "Por favor, preencha este campo"
-            },
-            password: {
-                valueMissing: "Senha é obrigatória"
-                
-            }
-        }
-
-        return messages[field.type][typeError];
-    }
-    function setCustomMessage(message) {
-      const spanError = field.parentNode.querySelector("span.error")
-      
-      if (message) {
-          spanError.classList.add("active");
-          spanError.innerHTML = message;
-      } else {
-          spanError.classList.remove("active");
-          spanError.innerHTML = "";
-      }
-  }
-
-  return function() {
-
-      const error = verifyErrors();
-
-      if(error) {
-          const message = customMessage(error);
-
-          field.style.borderColor = "red";
-          setCustomMessage(message);
-      } else {
-          field.style.borderColor = "green";
-          setCustomMessage();
-      }
-  }
-      </script>';
+      echo '<script>alert("Usuario ou senha incorretos!")</script>';
     }
   }
 }
       
-   */ ?>
+    ?>
 
   </body>
   

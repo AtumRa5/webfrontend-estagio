@@ -111,27 +111,23 @@ body {
   }
 
   /*Animações*/
-  .form-hide {
-    animation: down 1.2s forwards;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  .box.validate-error{
-    animation: incorreto_tremer 200ms linear, fade paused;
-    animation-iteration-count: 2;
-  }
   
+  input:focus ~ label,
+  input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
 
- @keyframes incorreto_tremer{
-  0%{
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0);
-  }
-  35% {
-    transform: translateX(-15%);
-  }
-  70% {
-    transform: translateX(15%);
-  }
- }
+.input span.error {
+  display: flex;
+  
+  padding: 0;
+
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.input span.error.active {
+  border: 1px solid red;
+  padding: 0.4em;
+}

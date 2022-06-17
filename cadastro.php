@@ -35,25 +35,10 @@
           }
       }
       ?>
-
-    <form class="box" action="valida.php"  action="salvarUsuario.php" method="POST"> 
-        <h1>Cadastro</h1>
-        <form action="salvar.php" method="POST">
-			<input type="hidden" name="cidUs" 
-									value="<?php echo($idUs); ?>"/>
-        <input type="text" name="ctxtRA" id="ra" class="text-input"placeholder="RA (Aluno)" >
-        <input type="password" name="ctxtSenha" placeholder="Senha" class="text-input" id="criarsenha">
-        <input type="password" name="txtConfirmarsenha" placeholder="Confirmar Senha" class="text-input" id="confirmarsenha">
-        <div><input type="submit" value="Cadastrar">
-        <input type="button" name="voltar" value="Voltar" id="voltar"></div>
-        <?php
+        
         
             
-        if ($_GET["mensagem"] == 'td'){
-        echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
-        }else if($_GET["mensagem"] == 'ig')
-        echo '<script>alert("Usuario já existente!")</script>';
-    /*<form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
+    <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
         <h1>Cadastro</h1>
         <input type="text" name="ra" id="ra" class="text-input"placeholder="RA (Aluno)" >
         <input type="password" name="senha" placeholder="Senha" class="text-input" id="criarsenha">
@@ -106,9 +91,7 @@
             }
         }
     ?>
-    */
-        
-    ?>
+
     </form>
     
     
