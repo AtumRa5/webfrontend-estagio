@@ -43,33 +43,21 @@
 
                 foreach($dados['cadastros'] as $cadastros){
                     if($cadastros['RA'] == $login){
-                        $user = $count;
                         break;
                     }
                     $count++;
                 }
                 
-                $count=0;
-                $count2=0;
-                
-                if($user == -1){
-                    echo '<script>alert("Usuario nao existe no banco de dados!")</script>';
-                }else{
-                    // adiciona dados
-                    foreach($dados['cadastros'] as $cadastros){
-                        if($count != $user){
-                            $excluido['cadastros'][$count] = $cadastros[$count];
-                            $count2++;
-                        }
-                        $count++;
-                    }
+                $login = '';
+                $senha = '';
 
-                    // encoda o json e salva no arquivo
-                    file_put_contents('arqJson/user.json', json_encode($excluido));
+                $dados['cadastros'][$count] = array('RA'=>$login, 'senha'=>$senha);
 
-                    echo '<script>alert("Exclusao realizado com sucesso!")</script>';
-                    echo '<script>window.location.href = "login.php";</script>';
-                }
+                // encoda o json e salva no arquivo
+                file_put_contents('arqJson/user.json', json_encode($dados));
+
+                echo '<script>alert("Exclusao realizado com sucesso!")</script>';
+                echo '<script>window.location.href = "login.php";</script>';
             }
         }
     ?>
