@@ -54,7 +54,7 @@
 				$nome = '';
 				$cnpj = '';
 
-                $dados['cadastros'][$count] = array( 'nome'=>$nome, $cnpj => cnpj);
+                $dados['cadastros'][$count] = array( 'nome'=>$nome, 'cnpj' => $cnpj);
 
                 // encoda o json e salva no arquivo
                 file_put_contents('arqJson/empresas.json', json_encode($dados));

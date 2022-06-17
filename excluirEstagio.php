@@ -53,7 +53,7 @@
 				$empresa = '';
 				$cnpj = '';
 
-                $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa' => $empresa , $cnpj => cnpj);
+                $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa' => $empresa , 'cnpj' => $cnpj);
 
                 // encoda o json e salva no arquivo
                 file_put_contents('arqJson/estagio.json', json_encode($dados));

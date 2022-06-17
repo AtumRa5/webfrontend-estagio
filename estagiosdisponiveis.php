@@ -73,7 +73,7 @@ if($_SESSION['login'] == true){
           $table .= '<thead>';
           $table .= '<tr>';
           $table .= '<th>Area</th>';
-          $table .= '<th>Nome</th>';
+          $table .= '<th>Usuario</th>';
           $table .= '<th>Empresa</th>';
           $table .= '<th>CNPJ</th>';
           $table .= '</tr>';
