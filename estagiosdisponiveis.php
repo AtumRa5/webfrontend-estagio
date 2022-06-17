@@ -61,31 +61,39 @@ if($_SESSION['login'] == true){
             </nav>
 
             <div class="tabela">
-                <table class="styled-table" border="2">
-                    <thead>
-                        <tr>        
-                            <th>Estagios</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php include_once("funEstagio.php");
-                        $vetestagio = retornaEstagio();
-                        if( $vetestagio != null){
-                            foreach($vetestagio as $estagio){
-                                $nome = $estagio['nome'];
-                                $area = $estagio['area'];
-                                $empresa = $estagio['empresa'];
-                                $idestagio = $estagio['idestagio'];
-                                echo('<tr> <td>'. $nome .'</td>
-                                <td>'. $area .'</td>
-                                <td>'.  $empresa .'</td>
-                                <td><a href="cadastrarestagio.php?id='. $idestagio .'>Alterar</a><a href="excluirEstagio.php?id=' .$idestagio. ' onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
-                            }
-                        }else{
-                            echo "<tr><td>Nenhum registro encontrado!</td></tr>";
-                        }
-                    ?>
-                   
+            <?php
+          $arquivo = file_get_contents('arqJson/estagios.json');
+          $dados = json_decode($arquivo);
+
+          //montagem do html da tabela
+          $table  = '<table class="styled-table" border="2">';
+          $table .= '<thead>';
+          $table .= '<tr>';
+          $table .= '<th>Area</th>';
+          $table .= '<th>Nome</th>';
+          $table .= '<th>Empresa</th>';
+          $table .= '<th>CNPJ</th>';
+          $table .= '</tr>';
+          $table .= '</thead>';
+          $table .= '<tbody>';
+
+          foreach($dados->cadastros as $cadastros){
+            $table .= '<tr class="active-row">';
+            $table .= "<td>{$cadastros->area}</td>";
+            $table .= "<td>{$cadastros->nome}</td>";
+            $table .= "<td>{$cadastros->empresa}</td>";
+            $table .= "<td>{$cadastros->cnpj}</td>";
+            $table .= '</tr>';
+          }
+
+          // fechar tabela
+          $table .= '</tbody>';
+          $table .= '</table>';
+
+          // imprimir tabela
+          echo $table;
+        ?>
+      </div>
                     </tbody>
                  </table>
 
