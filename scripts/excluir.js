@@ -5,3 +5,7 @@ function excluir(){
   function lixo(){
     window.location.href = "excluirEmpresa.php"
   }
+
+  function hhh(){
+    window.location.href = "excluiruser.php"
+  }
