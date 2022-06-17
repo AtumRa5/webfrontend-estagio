@@ -29,7 +29,7 @@
         </div>
 
         <div class="navbar-nav">   
-          <a class="nav-link" href="noticias.html">NOTICIAS</a>  
+          <a class="nav-link" href="noticias.php">NOTICIAS</a>  
         </div>
         
         <div class="navbar-nav">

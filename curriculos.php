@@ -28,7 +28,7 @@ if($_SESSION['login'] == true){
           <a class="nav-link" href="index.php">INICIO</a>
         </div>
         <div class="navbar-nav">
-          <a class="nav-link" href="noticias.html">NOTICIAS</a>
+          <a class="nav-link" href="noticias.php">NOTICIAS</a>
         </div>
         <div class="navbar-nav">
           <a class="nav-link" href="curriculos.php">CURRICULOS</a>
