@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if($_SESSION['login'] == true){
+    
+}else{
+    
+    header("Location:login.php?mensagem=nl");
+}
+?>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
@@ -52,7 +63,7 @@
       </nav>
 
       <div class="tabela">
-        <?php/*
+        <?php
           $arquivo = file_get_contents('arqJson/empresas.json');
           $dados = json_decode($arquivo);
            //montagem do html da tabela
@@ -77,27 +88,10 @@
           $table .= '</table>';
 
           // exibição na tela
-          echo $table;*/
+          echo $table;
         ?>
         
-        <?php 
-          include_once("pessoa.php");
-          $vetpessoas = retornaPessoas();
-
-          if($vetpessoas != null){
-            foreach ($vetpessoas as $pessoa){
-              $nome = $pessoa['nome'];
-              $telefone = $pessoa['telefone'];
-              $email = $pessoa['email'];
-              $idpessoa = $pessoa['idpessoa'];
-              echo('<tr> <td>'.$nome.'</td> <td>'.$telefone.'</td>
-              <td>'.$email.'</td> <td><a href="formulario.php?id='.$idpessoa.
-              '" class="btn btn-primary">Alterar</a><a href="excluir.php?id='. $idpessoa.'" class="btn btn-danger" onclick="return confirm(\'Deseja excluir?\');">Excluir</a></td> </tr>');
-            }
-          }else{
-            echo("<tr><td>Nenhum registro encontrado!</td></tr>");
-          }
-        ?>
+      
                           
         </div>
           <div class="myChart" id="myChart" style="width:100%; max-width:600px; height:500px;">

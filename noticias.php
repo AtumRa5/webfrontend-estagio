@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if($_SESSION['login'] == true){
+    
+}else{
+    
+    header("Location:login.php?mensagem=nl");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
