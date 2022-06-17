@@ -39,8 +39,11 @@
     
   ?>
 
-    <form class="box" method="POST" action="salvar.php"> 
+    <form class="box" method="POST" action="salvarEstagio.php"> 
         <h1>Cadastro de Estagio</h1>
+        <form action="salvar.php" method="POST">
+			<input type="hidden" name="idEs" 
+									value="<?php echo($idUs); ?>"/>
         <input type="text" name="area" id="area" class="text-input"placeholder="Área" 	value="<?php echo($area); ?>" >
         <input type="text" name="nome" placeholder="Nome" class="text-input" id="nome" value="<?php echo($nome); ?>">
         <input type="text" name="empresa" placeholder="Empresa" class="text-input" id="empresa" value="<?php echo($empresa); ?>">

@@ -1,3 +1,4 @@
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -35,58 +36,29 @@
       }
       ?>
 
-    <form class="box" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"> 
+    <form class="box" action="valida.php"  action="salvarUsuario.php" method="POST"> 
         <h1>Cadastro</h1>
-        <input type="text" name="txtRA" id="ra" class="text-input"placeholder="RA (Aluno)" >
-        <input type="password" name="txtSenha" placeholder="Senha" class="text-input" id="criarsenha">
+        <form action="salvar.php" method="POST">
+			<input type="hidden" name="cidUs" 
+									value="<?php echo($idUs); ?>"/>
+        <input type="text" name="ctxtRA" id="ra" class="text-input"placeholder="RA (Aluno)" >
+        <input type="password" name="ctxtSenha" placeholder="Senha" class="text-input" id="criarsenha">
         <input type="password" name="txtConfirmarsenha" placeholder="Confirmar Senha" class="text-input" id="confirmarsenha">
         <div><input type="submit" value="Cadastrar">
         <input type="button" name="voltar" value="Voltar" id="voltar"></div>
+        <?php
+        
+            
+        if ($_GET["mensagem"] == 'td'){
+        echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
+        }else if($_GET["mensagem"] == 'ig')
+        echo '<script>alert("Usuario já existente!")</script>';
+    
+        
+    ?>
     </form>
     
-    <?php
-            $login = $_POST['ra'];
-            $senha = $_POST['senha'];
-            $confirmarsenha = $_POST['confirmarsenha'];
-            $verif = 0; // Verifica se as senhas são equivalentes
-            $verifuser = 0; // Verifica se o usuário já existe no json
-
-            if($senha != $confirmarsenha) // Verifica se as senhas são equivalentes
-                $verif = 1;
-            
-            $arquivo = file_get_contents('arqJson/user.json');
-            $dados = json_decode($arquivo, true);
-
-            foreach($dados['cadastros'] as $cadastros){ // Verifica se o usuário já existe no json
-                if($cadastros['RA'] == $login)
-                    $verifuser = 1;
-            }
-
-            if($verifuser == 1){
-                echo '<script>alert("O RA digitado já está cadastrado!")</script>';
-            }else if($verif == 1){
-                echo '<script>alert("As senhas não são equivalentes!")</script>';
-            }else if($login == '' || $senha == ''){
-                echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
-            }else{
-                
-                $count=0;
-
-                foreach($dados['cadastros'] as $cadastros){
-                    $count++;
-                }
-
-                // adiciona dados
-                $dados['cadastros'][$count] = array('RA'=>$login, 'senha'=>$senha);
-
-                // encoda o json e salva no arquivo
-                file_put_contents('arqJson/user.json', json_encode($dados));
-
-                echo '<script>alert("Cadastro realizado com sucesso!")</script>';
-                echo '<script>window.location.href = "login.php";</script>';
-            }
-        }
-    ?>
+    
     
 </body>
 

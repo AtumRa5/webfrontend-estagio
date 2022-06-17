@@ -1,32 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     <?php
         session_start();  
         include_once ("usuario.php");
         
             $login = $_POST['ra'];
             $senha = $_POST['senha'];
+            $confirmarsenha = $_POST['confirmarsenha'];
             $igual = existirPessoa($login);
             $valida = validaUsuario($login,$senha);
             $verif = 0;
 
-            if($login == '' || $senha == ''){
-            echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
+            if($igual != null)
             ?>
-            <meta http-equiv="refresh" content="0; URL='login.php?mensagem=td'"/>
+             <meta http-equiv="refresh" content="0; URL=cadastro.php?mensagem=ig'"/>
+            <?php
+            if($senha != $confirmarsenha)
+            ?>
+             <meta http-equiv="refresh" content="0; URL=cadastro.php?mensagem=dif'"/>
+            <?php
+            if($login == '' || $senha == ''){
+            ?>
+             <meta http-equiv="refresh" content="0; URL=cadastro.php?mensagem=td'"/>
             <?php
             }
             if($valida == null){
+                $_SESSION['login'] = false;
                 ?>
-    
-                <meta http-equiv="refresh" content="0; URL='login.php?mensagem=ui'"/>
+             <meta http-equiv="refresh" content="0; URL=login.php?mensagem=ui'"/>
+                
             <?php }else{  
                 $_SESSION['login'] = true;
             ?>
@@ -37,5 +38,3 @@
         
       
     ?>
-</body>
-</html>

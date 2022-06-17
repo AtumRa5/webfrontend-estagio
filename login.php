@@ -38,9 +38,10 @@
         <p>
 
             <?php
-                if ($_GET["mensagem"] == 'td')
-                echo '<script>alert("Todos os campos devem estar preenchidos!")</script>';
-                else if($_GET["mensagem"] == 'ui')
+            
+                if ($_GET["mensagem"] == 'nl'){
+                echo '<script>alert("Login é obrigatorio!!")</script>';
+                }else if($_GET["mensagem"] == 'ui')
                 echo '<script>alert("Usuário ou senha incorretos!")</script>';
             ?>
 
