@@ -79,10 +79,12 @@
           $table .= '<tbody>';
 
           foreach($dados->cadastros as $cadastros){
-            $table .= '<tr class="active-row">';
-            $table .= "<td>{$cadastros->cnpj}</td>";
-            $table .= "<td>{$cadastros->nome}</td>";
-            $table .= '</tr>';
+            if($cadastros->cnpj != ''){
+              $table .= '<tr class="active-row">';
+              $table .= "<td>{$cadastros->cnpj}</td>";
+              $table .= "<td>{$cadastros->nome}</td>";
+              $table .= '</tr>';
+            }
           }
 
           // fechar tabela

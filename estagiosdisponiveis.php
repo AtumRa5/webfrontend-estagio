@@ -81,12 +81,14 @@ if($_SESSION['login'] == true){
           $table .= '<tbody>';
 
           foreach($dados->cadastros as $cadastros){
-            $table .= '<tr class="active-row">';
-            $table .= "<td>{$cadastros->area}</td>";
-            $table .= "<td>{$cadastros->nome}</td>";
-            $table .= "<td>{$cadastros->empresa}</td>";
-            $table .= "<td>{$cadastros->cnpj}</td>";
-            $table .= '</tr>';
+            if($cadastros->area != ''){
+                $table .= '<tr class="active-row">';
+                $table .= "<td>{$cadastros->area}</td>";
+                $table .= "<td>{$cadastros->nome}</td>";
+                $table .= "<td>{$cadastros->empresa}</td>";
+                $table .= "<td>{$cadastros->cnpj}</td>";
+                $table .= '</tr>';
+            }
           }
 
           // fechar tabela
