@@ -57,7 +57,7 @@
                     $dados['cadastros'][$count] = array('area'=>$area, 'nome'=>$nome, 'empresa' => $empresa , 'cnpj' => $cnpj);
 
                     // encoda o json e salva no arquivo
-                    file_put_contents('arqJson/estagio.json', json_encode($dados));
+                    file_put_contents('arqJson/estagios.json', json_encode($dados));
 
                     echo '<script>alert("Exclusao realizado com sucesso!")</script>';
                     echo '<script>window.location.href = "estagiosdisponiveis.php";</script>';
